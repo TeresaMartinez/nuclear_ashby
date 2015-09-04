@@ -1,9 +1,15 @@
 """
-Element xs extension for periodictable.
-Example --> print U capture cross sections at 0.0253 eV
->>> import xs_elements
+Element and isotope xs extension for periodictable.
+
+To load
+>>> import xs
 >>> import periodictable as pt
->>> print pt.U.xs_elements.cap['thr']
+
+Example --> print U capture cross sections at 0.0253 eV
+>>> print pt.U.xs.cap['thr']
+
+Example --> print U-235 fission cross sections at 14 MeV
+>>> print pt.U[235].xs.fis['14M']
 
 XS calculated using xs from xs_isotopes table
 xs units: 1/cm
